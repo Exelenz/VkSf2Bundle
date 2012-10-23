@@ -40,7 +40,7 @@ class VkApiService implements VkApiServiceInterface
                 'fields' => 'uid, first_name, last_name, nickname, sex',
             ));
 
-        return $result['response'][0];
+        return $result['response'];
     }
 
 }
