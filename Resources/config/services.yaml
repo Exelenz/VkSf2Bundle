@@ -16,12 +16,12 @@ services:
     exelenz_vkphpsdk.oauth.service:
         class: Exelenz\vkPhpSdk\classes\Oauth2Proxy
         arguments:
-            - %exelenz_vk_sf2.oauth.client_id%
-            - %exelenz_vk_sf2.oauth.client_secret%
+            - %oauth_client_id%
+            - %oauth_client_secret%
             - %exelenz_vkphpsdk.oauth.access_token_url%
             - %exelenz_vkphpsdk.oauth.dialog_url%
             - %exelenz_vkphpsdk.oauth.responce_type%
-            - %exelenz_vk_sf2.oauth.redirectUri%
+            - %oauth_redirectUri%
             - %exelenz_vkphpsdk.oauth.scope%
             - %exelenz_vkphpsdk.oauth.sessionPrefix%
             - @session
