@@ -34,4 +34,13 @@ class VkApiService implements VkApiServiceInterface
         return $result['response'][0];
     }
 
+    public function getUserFriends ()
+    {
+        $result = $this->vkapi->api('friends.get', array(
+                'fields' => 'uid, first_name, last_name, nickname, sex',
+            ));
+
+        return $result['response'][0];
+    }
+
 }
