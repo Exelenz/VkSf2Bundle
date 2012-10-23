@@ -1,10 +1,7 @@
 parameters:
-    exelenz_vkphpsdk.oauth.client_id: 2043672
-    exelenz_vkphpsdk.oauth.client_secret: 'Nl8t5HlUgGrsC3p7LgUE'
     exelenz_vkphpsdk.oauth.access_token_url: 'https://oauth.vk.com/access_token'
     exelenz_vkphpsdk.oauth.dialog_url: 'https://oauth.vk.com/authorize'
     exelenz_vkphpsdk.oauth.responce_type: 'code'
-    exelenz_vkphpsdk.oauth.redirectUri: 'http://local.toplimit.ru/app_dev.php'
     exelenz_vkphpsdk.oauth.scope: 'offline,notify,friends,photos,audio,video,wall'
     exelenz_vkphpsdk.oauth.sessionPrefix: 'vkapi_42_'
 
@@ -27,6 +24,7 @@ services:
             - %exelenz_vkphpsdk.oauth.redirectUri%
             - %exelenz_vkphpsdk.oauth.scope%
             - %exelenz_vkphpsdk.oauth.sessionPrefix%
+            - @session
         public: false
 
     exelenz_vkphpsdk.vkapi.service:
